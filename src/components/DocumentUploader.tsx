@@ -292,7 +292,7 @@ export const DocumentUploader: React.FC<DocumentUploaderProps> = ({ onUpload, is
                 <div className="bg-gray-50 rounded-lg p-8">
                   <Camera className="w-16 h-16 text-gray-400 mx-auto mb-4" />
                   <div className="text-sm text-gray-600 mb-6">
-                    <h4 className="font-medium mb-3">📋 Camera Guidelines:</h4>
+                    <h4 className="font-medium mb-3"> Camera Guidelines:</h4>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
                       <div>
                         <h5 className="font-medium text-gray-700 mb-2">✅ Do:</h5>
