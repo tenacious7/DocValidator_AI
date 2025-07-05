@@ -19,12 +19,15 @@ export const useDocumentProcessor = () => {
       await new Promise(resolve => setTimeout(resolve, 800 + Math.random() * 400));
     }
 
-    // Call the real AI backend
+    // Call the real AI backend - use the same protocol as the current page
+    const protocol = window.location.protocol;
+    const backendUrl = `${protocol}//localhost:3001/api/validate-document`;
+    
     const formData = new FormData();
     formData.append('document', file);
 
     try {
-      const response = await fetch('http://localhost:3001/api/validate-document', {
+      const response = await fetch(backendUrl, {
         method: 'POST',
         body: formData
       });
